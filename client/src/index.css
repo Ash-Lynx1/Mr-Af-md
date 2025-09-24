@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(222.2 84% 4.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222.2 84% 4.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222.2 84% 4.9%);
+  --primary: hsl(214 100% 27%);
+  --primary-foreground: hsl(210 40% 98%);
+  --secondary: hsl(210 40% 96%);
+  --secondary-foreground: hsl(222.2 84% 4.9%);
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+  --accent: hsl(187 100% 42%);
+  --accent-foreground: hsl(222.2 84% 4.9%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(214 100% 27%);
+  --chart-1: hsl(214 100% 27%);
+  --chart-2: hsl(187 100% 42%);
+  --chart-3: hsl(42 92% 56%);
+  --chart-4: hsl(147 78% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(222.2 84% 4.9%);
+  --sidebar-primary: hsl(214 100% 27%);
+  --sidebar-primary-foreground: hsl(210 40% 98%);
+  --sidebar-accent: hsl(210 40% 96%);
+  --sidebar-accent-foreground: hsl(214 100% 27%);
+  --sidebar-border: hsl(214.3 31.8% 91.4%);
+  --sidebar-ring: hsl(214 100% 27%);
+  --font-sans: "Inter", "Open Sans", sans-serif;
+  --font-serif: "Georgia", serif;
+  --font-mono: "Menlo", monospace;
+  --radius: 8px;
+}
+
+[data-theme="dark"] {
+  --background: hsl(222.2 84% 4.9%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222.2 84% 4.9%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222.2 84% 4.9%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(214 100% 27%);
+  --primary-foreground: hsl(222.2 84% 4.9%);
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217.2 32.6% 17.5%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(187 100% 42%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(217.2 32.6% 17.5%);
+  --input: hsl(217.2 32.6% 17.5%);
+  --ring: hsl(214 100% 27%);
+  --chart-1: hsl(214 100% 27%);
+  --chart-2: hsl(187 100% 42%);
+  --chart-3: hsl(42 92% 56%);
+  --chart-4: hsl(147 78% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(222.2 84% 4.9%);
+  --sidebar-foreground: hsl(210 40% 98%);
+  --sidebar-primary: hsl(214 100% 27%);
+  --sidebar-primary-foreground: hsl(210 40% 98%);
+  --sidebar-accent: hsl(217.2 32.6% 17.5%);
+  --sidebar-accent-foreground: hsl(187 100% 42%);
+  --sidebar-border: hsl(217.2 32.6% 17.5%);
+  --sidebar-ring: hsl(214 100% 27%);
+}
+
+[data-theme="navy"] {
+  --background: hsl(213 27% 84%);
+  --foreground: hsl(213 100% 6%);
+  --card: hsl(213 27% 84%);
+  --card-foreground: hsl(213 100% 6%);
+  --popover: hsl(213 27% 84%);
+  --popover-foreground: hsl(213 100% 6%);
+  --primary: hsl(213 100% 20%);
+  --primary-foreground: hsl(213 27% 84%);
+  --secondary: hsl(213 27% 74%);
+  --secondary-foreground: hsl(213 100% 6%);
+  --muted: hsl(213 27% 74%);
+  --muted-foreground: hsl(213 20% 30%);
+  --accent: hsl(197 100% 48%);
+  --accent-foreground: hsl(213 100% 6%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(213 27% 84%);
+  --border: hsl(213 27% 64%);
+  --input: hsl(213 27% 64%);
+  --ring: hsl(213 100% 20%);
+  --chart-1: hsl(213 100% 20%);
+  --chart-2: hsl(197 100% 48%);
+  --chart-3: hsl(42 92% 56%);
+  --chart-4: hsl(147 78% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(213 27% 84%);
+  --sidebar-foreground: hsl(213 100% 6%);
+  --sidebar-primary: hsl(213 100% 20%);
+  --sidebar-primary-foreground: hsl(213 27% 84%);
+  --sidebar-accent: hsl(213 27% 74%);
+  --sidebar-accent-foreground: hsl(213 100% 20%);
+  --sidebar-border: hsl(213 27% 64%);
+  --sidebar-ring: hsl(213 100% 20%);
+}
+
+[data-theme="navy-neon"] {
+  --background: hsl(213 100% 6%);
+  --foreground: hsl(180 100% 90%);
+  --card: hsl(213 100% 6%);
+  --card-foreground: hsl(180 100% 90%);
+  --popover: hsl(213 100% 6%);
+  --popover-foreground: hsl(180 100% 90%);
+  --primary: hsl(213 100% 20%);
+  --primary-foreground: hsl(180 100% 90%);
+  --secondary: hsl(213 50% 15%);
+  --secondary-foreground: hsl(180 100% 90%);
+  --muted: hsl(213 50% 15%);
+  --muted-foreground: hsl(180 50% 70%);
+  --accent: hsl(180 100% 50%);
+  --accent-foreground: hsl(213 100% 6%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(180 100% 90%);
+  --border: hsl(213 50% 25%);
+  --input: hsl(213 50% 25%);
+  --ring: hsl(180 100% 50%);
+  --chart-1: hsl(213 100% 20%);
+  --chart-2: hsl(180 100% 50%);
+  --chart-3: hsl(42 92% 56%);
+  --chart-4: hsl(147 78% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(213 100% 6%);
+  --sidebar-foreground: hsl(180 100% 90%);
+  --sidebar-primary: hsl(213 100% 20%);
+  --sidebar-primary-foreground: hsl(180 100% 90%);
+  --sidebar-accent: hsl(213 50% 15%);
+  --sidebar-accent-foreground: hsl(180 100% 50%);
+  --sidebar-border: hsl(213 50% 25%);
+  --sidebar-ring: hsl(180 100% 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .slide-in {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .slide-in.open {
+    transform: translateX(0);
+  }
+
+  .backdrop {
+    backdrop-filter: blur(4px);
+  }
+
+  .glow {
+    box-shadow: 0 0 20px var(--accent);
+  }
+
+  .pulse-slow {
+    animation: pulse 3s infinite;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  .coin-animation {
+    animation: coinFlip 0.6s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .theme-transition {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes coinFlip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(0deg); }
+}

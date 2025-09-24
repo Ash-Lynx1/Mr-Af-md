@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: mr-afrix-md
+    env: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mr-afrix-md-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: SENDGRID_API_KEY
+        sync: false
+    autoDeploy: true
+    healthCheckPath: /
+    domains:
+      - mr-afrix-md.onrender.com
+
+databases:
+  - name: mr-afrix-md-db
+    databaseName: mr_afrix_md
+    user: mr_afrix_md_user
+    plan: starter
+
+# Build settings
+buildFilter:
+  paths:
+    - server/**
+    - client/**
+    - shared/**
+    - package.json
+    - tailwind.config.ts
+    - vite.config.ts
+    - tsconfig.json
+    - postcss.config.js
+    - drizzle.config.ts
+  ignoredPaths:
+    - node_modules/**
+    - .git/**
+    - README.md
+    - .env*
